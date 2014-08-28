@@ -11,33 +11,43 @@
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-		<script type="text/javascript" src="../static/assets/javascripts/source/vendors/custom.modernizr.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
 	</head>
 
 	<body>
 		<header></header>
 
 		<div id="main">
-			<div id="myModal" class="reveal-modal" data-reveal>
+			<h4><a id="reset">Reset progress</a></h4>
+
+			<div id="myModal" class="reveal-modal tiny" data-reveal>
+				<div class="modal-header">
+		            Progress
+				</div><!--/modal-header-->
+				<div class="close-reveal-modal"><img src="images/close.png" alt="Close" /></div><!--/close-reveal-modal-->
 				<div class="bar-container">
 					<div id="bar"></div>
-    				<p>Progress <span id="progress">0</span>%</p>
-				</div>
+    				<p id="progress-container">Progress <span id="progress">0</span>%</p>
+    				<p id="completed-container" class="hide">This task is 100% completed</p>
+				</div><!--/bar-container-->
 
 			</div>
 		</div>
 
 		<footer></footer>
+
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/js/foundation/foundation.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/js/foundation/foundation.reveal.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script>
+			$(document).foundation();
+
+		</script>
 	</body>
 
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/js/foundation.min.js" />
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/js/foundation/foundation.reveal.min.js" />
-	<script type="text/javascript" src="js/main.js" />
 
-	<script>
-		$(document).foundation();
-		$('#myModal').foundation('reveal', 'open');
-	</script>
 </html>
