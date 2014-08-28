@@ -33,8 +33,9 @@ function runProgress () {
 	    }, {
 	        duration: duration,
 	        step: function( now, fx ) {
+	        	fx.start = 0;
 	        	// update the progress percentage for each step
-	            $('#progress').text(Math.ceil(now));
+	            $('#progress').text(Math.floor(now));
 	        },
 	        complete: function () {
 	        	// when the animation completes, show the complete text
