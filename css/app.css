@@ -1,12 +1,18 @@
 /* Foundation override */
 dialog, .reveal-modal {
 	padding: 0 !important;
+	top: 30%!important;
 }
+@media only screen and (max-width: 40em) {
+    dialog, .reveal-modal {
+      min-height: 0; } }
+
 .reveal-modal .close-reveal-modal {
 	font-size: inherit;
 	line-height: 0;
 }
 
+/* Custom styles */
 .bar-container {
 	padding: 1.25rem;
 	text-align: center;
@@ -43,4 +49,7 @@ dialog, .reveal-modal {
 	background: linear-gradient(to bottom,  #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
 
+}
+#completed-container img {
+	width: 28px;
 }
